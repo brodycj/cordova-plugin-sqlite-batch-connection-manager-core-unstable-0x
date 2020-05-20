@@ -43,6 +43,14 @@
 
 - (void) executeBatch: (CDVInvokedUrlCommand *) commandInfo
 {
+  dispatch_async(
+    dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+      [self executeBatchNow: commandInfo];
+    });
+}
+
+- (void) executeBatchNow: (CDVInvokedUrlCommand *) commandInfo
+{
   NSArray * _args = commandInfo.arguments;
 
   const int connection_id = [(NSNumber *)[_args objectAtIndex: 0] intValue];
