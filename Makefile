@@ -40,7 +40,7 @@ prepare-demo-plugins:
 	echo 'use Cordova to add desired platform to the demo before running'
 
 clean: clean-demo
-	rm -rf sqlite-amalgamation-* sqlite-batch-connection-* dist-dependencies
+	rm -rf sqlite-amalgamation-* sqlite-batch-connection-*
 
 clean-demo:
 	rm -rf demo/node_modules demo/package-lock.json demo/local-plugin demo/plugins demo/platforms
