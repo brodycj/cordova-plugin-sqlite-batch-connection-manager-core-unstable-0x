@@ -21,17 +21,13 @@
     <source-file src="src/ios/SQLiteBatchConnectionManager.m"/>
     <header-file src="dist-dependencies/SQLiteBatchCore.h" />
     <source-file src="dist-dependencies/SQLiteBatchCore.m" />
-    <header-file src="dist-dependencies/sqlite3.h" />
-    <source-file
-      src="dist-dependencies/sqlite3.c"
-      compiler-flags="
-        -DSQLITE_DEFAULT_SYNCHRONOUS=3
-        -DSQLITE_THREADSAFE=1
-        -DHAVE_USLEEP
-        -DHAVE_UTIME
-        " />
     <header-file src="dist-dependencies/sqlite-connection-core.h" />
     <source-file src="dist-dependencies/sqlite-connection-core.c" />
+    <podspec>
+      <pods>
+        <pod name="sqlite3" spec="~> 3.32.3" />
+      </pods>
+    </podspec>
   </platform>
   <platform name="osx">
     <config-file target="config.xml" parent="/*">
@@ -42,16 +38,12 @@
     <source-file src="src/ios/SQLiteBatchConnectionManager.m"/>
     <header-file src="dist-dependencies/SQLiteBatchCore.h" />
     <source-file src="dist-dependencies/SQLiteBatchCore.m" />
-    <header-file src="dist-dependencies/sqlite3.h" />
-    <source-file
-      src="dist-dependencies/sqlite3.c"
-      compiler-flags="
-        -DSQLITE_DEFAULT_SYNCHRONOUS=3
-        -DSQLITE_THREADSAFE=1
-        -DHAVE_USLEEP
-        -DHAVE_UTIME
-        " />
     <header-file src="dist-dependencies/sqlite-connection-core.h" />
     <source-file src="dist-dependencies/sqlite-connection-core.c" />
+    <podspec>
+      <pods>
+        <pod name="sqlite3" spec="~> 3.32.3" />
+      </pods>
+    </podspec>
   </platform>
 </plugin>
