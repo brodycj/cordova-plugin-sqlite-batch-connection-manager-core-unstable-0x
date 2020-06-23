@@ -25,25 +25,13 @@
     <source-file src="dist-dependencies/sqlite-connection-core.c" />
     <podspec>
       <pods>
+        <!-- TODO: MISSING EXTRA-SAFE -DSQLITE_DEFAULT_SYNCHRONOUS=3 FLAG
+             AND MISSING SOME OTHER FLAGS FROM ABOVE
+             FUTURE TBD CONSIDER SOME OTHER SQLITE FEATURE FLAGS WANTED -->
         <pod name="sqlite3" spec="~> 3.32.3" />
       </pods>
     </podspec>
   </platform>
-  <platform name="osx">
-    <config-file target="config.xml" parent="/*">
-      <feature name="SQLiteBatchConnectionManager">
-        <param name="osx-package" value="SQLiteBatchConnectionManager"/>
-      </feature>
-    </config-file>
-    <source-file src="src/ios/SQLiteBatchConnectionManager.m"/>
-    <header-file src="dist-dependencies/SQLiteBatchCore.h" />
-    <source-file src="dist-dependencies/SQLiteBatchCore.m" />
-    <header-file src="dist-dependencies/sqlite-connection-core.h" />
-    <source-file src="dist-dependencies/sqlite-connection-core.c" />
-    <podspec>
-      <pods>
-        <pod name="sqlite3" spec="~> 3.32.3" />
-      </pods>
-    </podspec>
-  </platform>
+  <!-- macOS ("osx") platform support is removed from this version branch -->
+  <!-- Note that podspec is not supported by cordova-osx. -->
 </plugin>
