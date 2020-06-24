@@ -2,6 +2,7 @@
   <js-module src="www/sqlite-batch-connection-manager.js" name="sqliteBatchConnectionManager">
     <runs/>
   </js-module>
+  <!-- -
   <platform name="android">
     <config-file target="config.xml" parent="/*">
       <feature name="SQLiteBatchConnectionManager">
@@ -12,6 +13,7 @@
     <source-file src="dist-dependencies/SQLiteBatchCore.java" target-dir="src/io/sqlc"/>
     <lib-file src="dist-dependencies/sqlite-connection-core-glue.jar" />
   </platform>
+  - -->
   <platform name="ios">
     <config-file target="config.xml" parent="/*">
       <feature name="SQLiteBatchConnectionManager">

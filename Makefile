@@ -20,9 +20,9 @@ update-dependencies:
 	(cd $(SQLITE_BATCH_CONNECTION_CORE_ROOT) && git checkout $(SQLITE_BATCH_CONNECTION_CORE_COMMIT_ID))
 
 build-dist-dependencies:
-	(cd $(SQLITE_BATCH_CONNECTION_CORE_ROOT)/sccglue && make jar)
+	# (cd $(SQLITE_BATCH_CONNECTION_CORE_ROOT)/sccglue && make jar)
 	mkdir dist-dependencies
-	cp $(SQLITE_BATCH_CONNECTION_CORE_ROOT)/sccglue/*.jar dist-dependencies
+	# cp $(SQLITE_BATCH_CONNECTION_CORE_ROOT)/sccglue/*.jar dist-dependencies
 	cp $(SQLITE_BATCH_CONNECTION_CORE_ROOT)/android/src/main/java/io/sqlc/SQLiteBatchCore.java dist-dependencies
 	cp $(SQLITE_BATCH_CONNECTION_CORE_ROOT)/sqlite-connection-core.[hc] dist-dependencies
 	cp $(SQLITE_BATCH_CONNECTION_CORE_ROOT)/ios/SQLiteBatchCore.[hm] dist-dependencies
