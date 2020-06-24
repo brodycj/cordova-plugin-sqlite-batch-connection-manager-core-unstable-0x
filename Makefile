@@ -1,6 +1,3 @@
-SQLITE_AMALGAMATION := sqlite-amalgamation-3320300
-SQLITE_ZIP := $(SQLITE_AMALGAMATION).zip
-
 SQLITE_BATCH_CONNECTION_CORE_REMOTE := \
 	https://github.com/brodybits/sqlite-batch-connection-core-2020-01
 
@@ -17,8 +14,6 @@ build: clean fetch-dependencies update-dependencies build-dist-dependencies
 prepare-demo: build prepare-demo-plugins
 
 fetch-dependencies:
-	curl -O https://sqlite.org/2020/$(SQLITE_ZIP)
-	unzip $(SQLITE_ZIP)
 	git clone $(SQLITE_BATCH_CONNECTION_CORE_REMOTE) $(SQLITE_BATCH_CONNECTION_CORE_ROOT)
 
 update-dependencies:
