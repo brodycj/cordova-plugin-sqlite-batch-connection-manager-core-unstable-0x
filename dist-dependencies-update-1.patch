@@ -1,0 +1,23 @@
+diff -u a/dist-dependencies/sqlite-connection-core.c b/dist-dependencies/sqlite-connection-core.c
+--- a/dist-dependencies/sqlite-connection-core.c	2020-06-23 20:08:55.000000000 -0400
++++ b/dist-dependencies/sqlite-connection-core.c	2020-06-23 20:11:27.000000000 -0400
+@@ -12,6 +12,8 @@
+ 
+ #include "sqlite3.h"
+ 
++#include "spatialite.h"
++
+ #define DEFAULT_MAX_SCC_CONNECTIONS 1000
+ 
+ #ifdef SCC_MAXIMUM_CONNECTIONS
+@@ -110,6 +112,10 @@
+     }
+ #endif
+ 
++    if (open_result == SQLITE_OK) {
++      spatialite_init_ex(db, spatialite_alloc_connection(), 1);
++    }
++
+     if (open_result != SQLITE_OK) {
+       // release the internal resource:
+       --_scc_record_count;

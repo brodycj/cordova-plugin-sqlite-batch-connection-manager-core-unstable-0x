@@ -1,8 +1,8 @@
 {
-  "name": "cordova-plugin-sqlite-batch-connection-manager-core",
+  "name": "cordova-plugin-sqlite-spatialite-batch-connection-manager-core",
   "version": "0.0.1-dev",
   "// copyright": "Copyright 2020-present Christopher J. Brody <chris.brody+brodybits@gmail.com>",
-  "description": "Cordova SQLite batch connection manager core plugin",
+  "description": "Cordova SQLite - Spatialite batch connection manager core plugin",
   "license": "(MIT OR COMMERCIAL)",
   "author": {
     "name": "Christopher J. Brody",

@@ -1,4 +1,6 @@
-# cordova-plugin-sqlite-batch-connection-manager-core
+# cordova-plugin-sqlite-spatialite-batch-connection-manager-core
+
+based on: <https://github.com/brodybits/cordova-plugin-sqlite-batch-connection-manager-core>
 
 Copyright 2020-present Christopher J. Brody <chris.brody+brodybits@gmail.com>
 

@@ -78,7 +78,7 @@ function startMemoryDatabaseDemo () {
 
       window.sqliteBatchConnectionManager.executeBatch(
         id,
-        [['SELECT UPPER(?)', ['Text']]],
+        [['SELECT spatialite_version()', []]],
         function (results) {
           log(JSON.stringify(results))
           startFileDatabaseDemo()

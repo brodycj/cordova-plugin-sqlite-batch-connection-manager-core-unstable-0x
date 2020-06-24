@@ -1,4 +1,4 @@
-<plugin id="cordova-plugin-sqlite-batch-connection-manager-core" version="0.0.1-dev">
+<plugin id="cordova-plugin-sqlite-spatialite-batch-connection-manager-core" version="0.0.1-dev">
   <js-module src="www/sqlite-batch-connection-manager.js" name="sqliteBatchConnectionManager">
     <runs/>
   </js-module>
@@ -31,7 +31,7 @@
         <!-- TODO: MISSING EXTRA-SAFE -DSQLITE_DEFAULT_SYNCHRONOUS=3 FLAG
              AND MISSING SOME OTHER FLAGS FROM ABOVE
              FUTURE TBD CONSIDER SOME OTHER SQLITE FEATURE FLAGS WANTED -->
-        <pod name="sqlite3" spec="~> 3.32.3" />
+        <pod name="spatialite" git="https://github.com/brodybits/spatialite-core.git" />
       </pods>
     </podspec>
   </platform>

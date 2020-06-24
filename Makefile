@@ -26,6 +26,7 @@ build-dist-dependencies:
 	cp $(SQLITE_BATCH_CONNECTION_CORE_ROOT)/android/src/main/java/io/sqlc/SQLiteBatchCore.java dist-dependencies
 	cp $(SQLITE_BATCH_CONNECTION_CORE_ROOT)/sqlite-connection-core.[hc] dist-dependencies
 	cp $(SQLITE_BATCH_CONNECTION_CORE_ROOT)/ios/SQLiteBatchCore.[hm] dist-dependencies
+	patch -p1 < dist-dependencies-update-1.patch
 
 prepare-demo-plugins:
 	mkdir -p demo/local-plugin
