@@ -35,6 +35,9 @@ now with background processing included
 from `demo/www/app.js`:
 
 ```js
+/* for prettier-standard --lint (eslint): */
+/* global cordova */
+
 document.addEventListener('deviceready', onReady)
 
 function log (text) {

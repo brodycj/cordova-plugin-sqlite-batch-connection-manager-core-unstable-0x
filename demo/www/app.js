@@ -1,4 +1,5 @@
-// Copyright 2020-present Christopher J. Brody <chris.brody+brodybits@gmail.com>
+/* for prettier-standard --lint (eslint): */
+/* global cordova */
 
 document.addEventListener('deviceready', onReady)
 
